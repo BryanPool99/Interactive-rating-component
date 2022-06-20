@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+body {
+  background-color: hsl(216, 12%, 8%);
+  font-size: 16px;
+  color: hsl(0, 0%, 100%);
+}
+.container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5rem;
+}
+.card {
+  width: 20rem;
+  height: 22rem;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 25px 60px 150px 55px 20px;
+  grid-template-rows: 15px 60px 70px 50px 80px 50px 20px;
+}
+.section-logo {
+  grid-area: 2 / 2 / 3 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.section-logo.remove{
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.section-info {
+  grid-area: 3 / 2 / 5 / 5;
+}
+.section-info.remove{
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.tittle {
+  margin: 0.5rem 0;
+}
+.description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2rem;
+  color: hsl(217, 12%, 63%);
+}
+.section-rating {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  grid-area: 5 / 2 / 6 / 5;
+}
+.section-rating.remove{
+  visibility: hidden;
+  opacity: 0;
+}
+.num1,
+.num2,
+.num3,
+.num4,
+.num5 {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  background-color: hsla(216, 12%, 54%, 0.137);
+  cursor: pointer;
+}
+.num1:hover,
+.num2:hover,
+.num3:hover,
+.num4:hover,
+.num5:hover {
+  background: hsl(217, 12%, 63%);
+  color: hsl(0, 0%, 100%);
+}
+.num1.active,
+.num2.active,
+.num3.active,
+.num4.active,
+.num5.active {
+  background: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+.submit {
+  grid-area: 6 / 2 / 7 / 5;
+  border-radius: 1.5rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(25, 97%, 53%);
+}
+.submit.remove{
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.btn-submit {
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 18rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(0, 0%, 100%);
+}
+.btn-submit:active {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+/*rating.html*/
+.section-img {
+  grid-area: 2 / 3 / 4 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem auto;
+  width: 10rem;
+  visibility: hidden;
+  opacity: 0;
+}
+.section-img.add{
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+.section-select_rating {
+  grid-area: 4 / 3 / 5 / 4;
+  margin: 0.3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(25, 97%, 53%);
+  height: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 12px;
+  visibility: hidden;
+  opacity: 0;
+}
+.section-select_rating.add{
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+
+.section-thanks {
+  grid-area: 5 / 2 / 7 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+}
+.section-thanks.add{
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+.tittle-thanks {
+  margin: 1rem auto;
+}
+.description-thanks {
+  margin: 0.1rem auto;
+  text-align: center;
+  color: hsl(216, 12%, 54%);
+  font-weight: 400;
+}
+/*FOOTER*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
